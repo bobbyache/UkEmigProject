@@ -1,6 +1,10 @@
 
 # Important
 
+Any programmer can solve a problem given time... what matters is how well the problem is solved. Big O tells us how well the problem is solved.
+
+Good code is `readable` and `scalable`.
+
 - Terms for Big-O:
   - Complexity
   - Time Complexity
@@ -9,11 +13,35 @@
 
 - We are measuring **scalability**.
 
+To do a simple performannce test with JavaScript one could use.
+
+```javascript
+(function performanceTest() {
+  const t0 = performance.now();
+  for (let i = 0; i < 100000; i++) {
+    console.log(i);
+  }
+  const  let t1 = performance.now()
+  console.log(t1 - t0);
+})();
+```
+
+This test only tells us how fast the code runs on this dataset on this machine. But this might run faster on another machine, it might run slower. One might have a super duper computer that runs really fast with the datasets that we provide it. When the code goes out in the real world, it might not run as well with larger datasets on slower computers.
+
+> Big O - How much does your code slow as your data grows.
+
 ## Thought Process
 - Identify your code
 - Identify N
 - Count the steps in a typical run
 - Keep the most significant part
+
+# Big O Rule Book
+
+- **Rule 1:** Worse Case
+- **Rule 2:** Remove Constants
+- **Rule 3:** Different terms for inputs
+- **Rule 4:** Drop Non Dominants
 
 # Runtimes
 
@@ -21,6 +49,9 @@
 
 
 ## Linear Time O(N)
+
+As the number of inputs increase, so do the number of operations.
+
 Take a real life example as in you're reading a novel. If someone asked you to keep reading until you find the first occurence of horse in novel, you'd read every word until you come across the word horse, and then you'd stop. However, the worst case scenario is that the first and last occurence of the word horse is the last word in the novel. Since we have to take the worst case scenario into account, this equates to $O(n)$.
 
 

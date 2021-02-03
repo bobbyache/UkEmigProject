@@ -3,7 +3,7 @@
 
 ## Sequential operation on a single dataset
 
-### Example X
+### Example 1
 
 There will be O(n) calls to pairSum. So time is O(n). These calls do not exist simmultaneously on the stack,
     so you only need O(1) of space.
@@ -118,11 +118,11 @@ logAllPairsInArray(boxes);
 const boxes = [1,2,3,4,5];
 
 function logAllPairsInArray(boxes: number[]): void {
-    boxes.forEach(firstBox => {
-        boxes.forEach(secondBox => {
-            console.log(`${firstBox}, ${secondBox}`);
-        });
-    });
+	boxes.forEach(firstBox => {
+		boxes.forEach(secondBox => {
+			console.log(`${firstBox}, ${secondBox}`);
+		});
+	});
 }
 
 logAllPairsInArray(boxes);
@@ -238,14 +238,14 @@ Study the following code:
 function WhyWouldIDoThis(array)
 {
 	max = NULL
-	
+
 	// O(n)
 	foreach(a in array)
 	{
 		max = MAX(a, max)
 	}
 	print max
-	
+
 	// O(n^2)
 	foreach(a in array)
 	{
@@ -253,7 +253,7 @@ function WhyWouldIDoThis(array)
 		{
 			print a,b
 		}
-    }
+	}
 }
 ```
 Perhaps you're tempted to answer $O(n + n^2)$ because of the two loops at play. However, in this case the runtime will be $O(n^2)$ as we always drop the non-dominant terms.
@@ -271,9 +271,9 @@ Examine this code.
 
 ```javascript
 function sum(n: number): number {
-    if (n <= 0) return 0;
-    console.log(n);
-    return n + sum(n - 1);
+	if (n <= 0) return 0;
+	console.log(n);
+	return n + sum(n - 1);
 }
 ```
 
