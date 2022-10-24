@@ -5,8 +5,7 @@
 
 ### Example 1
 
-There will be O(n) calls to pairSum. So time is O(n). These calls do not exist simmultaneously on the stack,
-    so you only need O(1) of space.
+Study the following code and provide the Big O.
 
 ```typescript
 function pairSumSequence(n: number): number {
@@ -19,6 +18,12 @@ function pairSumSequence(n: number): number {
     return sum;
 }
 ```
+
+### Answer
+
+There will be O(n) calls to pairSum. So time is O(n). These calls do not exist simmultaneously on the stack,
+    so you only need O(1) of space.
+
 
 If one were to measure `pairSum` it would be O(1). The values of the inputs do not change the time the function will take to run.
 
